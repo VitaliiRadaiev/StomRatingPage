@@ -582,6 +582,46 @@ $('.option').click(function(event) {
 	}
 });
 
+// === slider-reviews ==================================================================
+{
+	let slider = document.querySelector('.slider-reviews');
+	if(slider) {
+		$('.slider-reviews').slick({
+		  infinite: false,
+		  slidesToShow: 4,
+		  slidesToScroll: 1,
+		  prevArrow: '<div class="slick-arrow slick-prev"><span class=""><img src="img/icons/slider-arrow-left.svg" alt=""></span></div>',
+		  nextArrow: '<div class="slick-arrow slick-next"><span class=""><img src="img/icons/slider-arrow-right.svg" alt=""></span></div>',
+		  responsive: [
+		    {
+		      breakpoint: 1200,
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 1,
+		      }
+		    },
+		    {
+		      breakpoint: 900,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 1
+		      }
+		    },
+		    {
+		      breakpoint: 650,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
+		    // You can unslick at a given breakpoint now by adding:
+		    // settings: "unslick"
+		    // instead of a settings object
+		  ]
+		});
+	}
+}
+// === // slider-reviews ==================================================================
 
 
 
