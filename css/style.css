@@ -1785,7 +1785,7 @@ table th {
 .table-block .td_3 > span:after {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 39%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1821,7 +1821,7 @@ table th {
 .table-block .td_5 > span:after {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 39%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
