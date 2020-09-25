@@ -541,7 +541,7 @@ if($('.anchor').length>0) {
 
 	$(".anchor").click(function() {
 	  var elementClick = $(this).attr("href")
-	  var destination = $(elementClick).offset().top;
+	  var destination = $(elementClick).offset().top -100;
 	  jQuery("html:not(:animated),body:not(:animated)").animate({
 		scrollTop: destination
 	  }, 400);
@@ -592,6 +592,7 @@ $('.option').click(function(event) {
 		  slidesToScroll: 1,
 		  prevArrow: '<div class="slick-arrow slick-prev"><span class=""><img src="img/icons/slider-arrow-left.svg" alt=""></span></div>',
 		  nextArrow: '<div class="slick-arrow slick-next"><span class=""><img src="img/icons/slider-arrow-right.svg" alt=""></span></div>',
+
 		  responsive: [
 		    {
 		      breakpoint: 1200,
@@ -611,17 +612,103 @@ $('.option').click(function(event) {
 		      breakpoint: 650,
 		      settings: {
 		        slidesToShow: 1,
-		        slidesToScroll: 1
+		        slidesToScroll: 1,
+		        adaptiveHeight: true
 		      }
 		    }
-		    // You can unslick at a given breakpoint now by adding:
-		    // settings: "unslick"
-		    // instead of a settings object
 		  ]
 		});
 	}
 }
+
+{
+	let slider = document.querySelector('.slider-reviews-2');
+	if(slider) {
+		$('.slider-reviews-2').on('init', function(slick) {
+			let slider = document.querySelector('.slider-reviews-2 .slick-track');
+			if(slider.children.length <= 2) {
+				document.querySelector('.slider-reviews-2').classList.add('_two-items');
+			}
+
+			if(window.innerWidth <= 649) {
+				document.querySelectorAll('.item-slider-reviews').forEach((item) => {
+					let span = item.querySelector('.item-slider-reviews__name > span');
+					let boxMobile = item.querySelector('.item-slider-reviews__mobile-date');
+					if(span) {
+
+						boxMobile.append(span);
+					}
+				})
+			}
+		})
+		.slick({
+		  infinite: false,
+		  slidesToShow: 2,
+		  slidesToScroll: 1,
+		  prevArrow: '<div class="slick-arrow slick-prev"><span class=""><img src="img/icons/slider-arrow-left.svg" alt=""></span></div>',
+		  nextArrow: '<div class="slick-arrow slick-next"><span class=""><img src="img/icons/slider-arrow-right.svg" alt=""></span></div>',
+
+		  responsive: [
+		    {
+		      breakpoint: 650,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+		        adaptiveHeight: true
+		      }
+		    }
+		  ]
+		})
+		.on('breakpoint', function(slick, bp) {
+			if(bp.breakpoints[0] == 650) {
+				document.querySelectorAll('.item-slider-reviews').forEach((item) => {
+					let span = item.querySelector('.item-slider-reviews__name > span');
+					let boxMobile = item.querySelector('.item-slider-reviews__mobile-date');
+					if(span) {
+
+						boxMobile.append(span);
+					}
+				})
+			}
+		})	
+		
+	}
+}
 // === // slider-reviews ==================================================================
+
+
+// === slider-analogs ==================================================================
+{
+	let slider = document.querySelector('.slider-analogs');
+	if(slider) {
+		$('.slider-analogs').slick({
+		  infinite: false,
+		  slidesToShow: 3,
+		  slidesToScroll: 1,
+		  arrows: false,
+		  dots: true,
+		  daptiveHeight: true,
+		  responsive: [
+		    {
+		      breakpoint: 992,
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 1
+		      }
+		    },
+		    {
+		      breakpoint: 650,
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1,
+		        adaptiveHeight: true
+		      }
+		    }
+		  ]
+		});
+	}
+}
+// === // slider-analogs ==================================================================
 
 
 
