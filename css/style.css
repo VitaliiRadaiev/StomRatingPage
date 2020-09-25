@@ -2508,6 +2508,27 @@ table th {
   margin: 15px 0 15px;
 }
 
+.product-head__date {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(23, 24, 24, 0.54);
+  margin: 10px 0 16px;
+}
+
+.product-head__cost {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.product-head__cost > span {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 24px;
+}
+
 .product-head__btn-wrap {
   margin: 18px 0;
 }
@@ -3022,6 +3043,130 @@ table th {
   border: 1px solid #EAEAEA;
   border-radius: 6px;
   margin-right: 25px;
+}
+
+.webinar .local-navigation {
+  margin: 69px 0;
+}
+
+.webinar .analogs .item-slider-analogs__date {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(23, 24, 24, 0.54);
+  opacity: 0.54;
+  margin: -7px 0 0px;
+}
+
+.webinar .analogs .item-slider-analogs__time {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 24px;
+  margin: 6px 0 0px;
+}
+
+.webinar .analogs .item-slider-analogs__link {
+  margin-top: 43px;
+  margin-bottom: -1px;
+}
+
+.text-block {
+  margin: 72px 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.text-block__title {
+  margin-bottom: 24px;
+}
+
+.text-block .container > p {
+  max-width: 635px;
+  margin: 0px 0 16px;
+}
+
+.webinar-desc {
+  margin: 78px 0;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.webinar-desc__title {
+  margin-bottom: 24px;
+}
+
+.webinar-desc .container > p {
+  max-width: 635px;
+  margin: 0px 0 16px;
+}
+
+.lecturers {
+  margin: 80px 0 72px;
+}
+
+.lecturers__title {
+  margin-bottom: 35px;
+}
+
+.lecturers__list {
+  margin: 30px 0;
+}
+
+.lecturers__list > li:not(:last-child) {
+  margin-bottom: 34px;
+}
+
+.item-lecturers {
+  max-width: 635px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.item-lecturers__column_1 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin-right: 24px;
+}
+
+.item-lecturers__column_2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(100% - 102px);
+          flex: 1 1 calc(100% - 102px);
+}
+
+.item-lecturers__img {
+  width: 78px;
+  height: 78px;
+}
+
+.item-lecturers__name {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  margin: 7px 0 17px;
+}
+
+.item-lecturers__label {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 12px 0;
+}
+
+.item-lecturers__text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.item-lecturers__text > p {
+  margin: 0 0 15px;
 }
 
 .footer {
@@ -3923,6 +4068,27 @@ table th {
     margin: 8px 0 15px;
   }
 
+  .product-head__date {
+    font-size: 10px;
+    line-height: 11px;
+    margin: 8px 0 8px;
+  }
+
+  .product-head__cost > span {
+    font-size: 18px;
+    line-height: 19px;
+  }
+
+  .product-head__cost {
+    font-size: 10px;
+    line-height: 11px;
+  }
+
+  .product-head__cost > spna {
+    font-size: 18px;
+    line-height: 19px;
+  }
+
   .product-head__btn-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -4028,6 +4194,99 @@ table th {
 
   .functional__list-title > h4 {
     font-size: 16px;
+  }
+
+  .webinar .local-navigation {
+    margin: 14px 0;
+  }
+
+  .webinar .product-head {
+    margin-bottom: 14px;
+  }
+
+  .webinar .product-head__btn-wrap {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 14px;
+  }
+
+  .webinar .product-head__title {
+    margin-bottom: 8px;
+  }
+
+  .webinar .analogs {
+    margin: 65px 0 43px;
+  }
+
+  .webinar .analogs__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .webinar .analogs .item-slider-analogs__link {
+    margin-top: 14px;
+  }
+
+  .text-block {
+    margin: 25px 0 25px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .text-block__title {
+    margin-bottom: 15px;
+  }
+
+  .text-block .container > p {
+    margin: 0px 0 10px;
+  }
+
+  .webinar-desc {
+    margin: 25px 0 25px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .webinar-desc__title {
+    margin-bottom: 15px;
+  }
+
+  .webinar-desc .container > p {
+    margin: 0px 0 10px;
+  }
+
+  .lecturers {
+    margin: 39px 0 27px;
+  }
+
+  .lecturers__title {
+    margin-bottom: 22px;
+  }
+
+  .lecturers__list {
+    margin: 22px 0;
+  }
+
+  .lecturers__list > li:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  .item-lecturers {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .item-lecturers__column_1 {
+    margin-bottom: 12px;
+  }
+
+  .item-lecturers__name {
+    margin: 27px 0 15px;
+  }
+
+  .item-lecturers__mobile-box {
+    width: 100%;
   }
 }
 

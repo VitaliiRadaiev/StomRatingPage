@@ -630,7 +630,7 @@ $('.option').click(function(event) {
 				document.querySelector('.slider-reviews-2').classList.add('_two-items');
 			}
 
-			if(window.innerWidth <= 649) {
+			if(document.documentElement.clientWidth <= 649) {
 				document.querySelectorAll('.item-slider-reviews').forEach((item) => {
 					let span = item.querySelector('.item-slider-reviews__name > span');
 					let boxMobile = item.querySelector('.item-slider-reviews__mobile-date');
@@ -709,6 +709,44 @@ $('.option').click(function(event) {
 	}
 }
 // === // slider-analogs ==================================================================
+
+
+
+// === lecturers dinamic adaptive text ==================================================================
+{
+	let itemLecurers = document.querySelectorAll('.item-lecturers');
+	if(itemLecurers) {
+
+		const adaptive = () => {
+			itemLecurers.forEach((item) => {
+				let label = item.querySelector('.item-lecturers__label');
+				let text = item.querySelector('.item-lecturers__text');
+				let boxMobile = item.querySelector('.item-lecturers__mobile-box');
+
+				if(label) {
+					boxMobile.append(label);
+				}
+
+				if(text) {
+					boxMobile.append(text);
+				}
+
+			})
+		}
+
+		if(document.documentElement.clientWidth <= 575) {
+			adaptive();
+		}
+
+
+		window.addEventListener('resize', () => {
+			if(document.documentElement.clientWidth <= 575) {
+				adaptive();
+			}
+		});
+	}
+}
+// === // lecturers dinamic adaptive text ==================================================================
 
 
 
