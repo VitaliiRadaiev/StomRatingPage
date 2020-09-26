@@ -1570,7 +1570,9 @@ table th {
 .search__item._focus .search__icon {
   opacity: 0;
   width: 0;
-  lex: 0 0 0px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 0px;
+          flex: 0 0 0px;
 }
 
 .search__icon {
