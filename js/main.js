@@ -750,6 +750,19 @@ $('.option').click(function(event) {
 
 
 
+// === pagination handler mobile ==================================================================
+{
+	let paginationBlock = document.querySelector('.webinar-categories-block__pagination');
+	if(paginationBlock) {
+		if(paginationBlock.children.length > 5) {
+			paginationBlock.classList.add('_many-elements')
+		}
+	}
+}
+// === // pagination handler mobile ==================================================================
+
+
+
 });
 
 // ====  google map ===============
