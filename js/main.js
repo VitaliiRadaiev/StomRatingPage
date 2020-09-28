@@ -762,6 +762,25 @@ $('.option').click(function(event) {
 // === // pagination handler mobile ==================================================================
 
 
+// ===  reviews-block_2 ==================================================================
+{
+	let reviewsBlock = document.querySelector('.reviews-block_2');
+	if(reviewsBlock) {
+		if(document.documentElement.clientWidth <= 649) {
+			document.querySelectorAll('.item-slider-reviews').forEach((item) => {
+				let span = item.querySelector('.item-slider-reviews__name > span');
+				let boxMobile = item.querySelector('.item-slider-reviews__mobile-date');
+				if(span) {
+
+					boxMobile.append(span);
+				}
+			})
+		}
+	}
+}
+// === //  reviews-block_2 ==================================================================
+
+
 
 });
 
