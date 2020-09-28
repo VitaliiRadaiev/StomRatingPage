@@ -2556,7 +2556,7 @@ table th {
   line-height: 18px;
 }
 
-.instruction__collapse > p {
+.instruction__collapse > div > p {
   margin: 15px 0;
 }
 
