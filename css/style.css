@@ -1100,7 +1100,7 @@ textarea {
 }
 
 .input {
-  border-radius: 0 !important;
+  border-radius: 0;
   width: 100%;
   display: block;
   padding: 0px 20px;
@@ -1320,11 +1320,15 @@ textarea.input {
 }
 
 .rating .star {
-  width: 17px;
-  height: 14px;
+  width: 25px;
+  height: 25px;
   display: inline-block;
   position: relative;
   z-index: 3;
+}
+
+.rating .star:not(:last-child) {
+  margin-right: 3px;
 }
 
 .rating__line {
@@ -3415,6 +3419,11 @@ table th {
   margin-bottom: 16px;
 }
 
+.card-webinar-categories__text-preview {
+  margin: 30px 0;
+  max-width: 600px;
+}
+
 .card-webinar-categories__btn-wrap {
   margin: 15px 0 17px;
 }
@@ -3438,6 +3447,85 @@ table th {
 .analogs-page-head p {
   max-width: 635px;
   margin: 0 0 16px;
+}
+
+.articles-block {
+  margin-bottom: 50px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.articles-block p {
+  margin: 16px 0;
+}
+
+.articles-block ul {
+  max-width: 30px 0;
+}
+
+.articles-block ul > li {
+  padding-left: 25px;
+}
+
+.articles-block figure {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 40px 0;
+  height: 0;
+  padding-bottom: 39%;
+}
+
+.articles-block figure img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.review-block {
+  min-height: calc(100vh - 248px);
+}
+
+.review-form {
+  margin: 30px 0;
+}
+
+.review-form__item {
+  margin-bottom: 35px;
+}
+
+.review-form__item label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.review-form__item .input {
+  min-height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: rgba(23, 24, 24, 0.8);
+}
+
+.review-form__item .textarea {
+  resize: none;
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: rgba(23, 24, 24, 0.8);
+  padding: 15px 15px;
+}
+
+.review-form__textarea-info {
+  font-size: 12px;
+  line-height: 20px;
+  color: rgba(23, 24, 24, 0.54);
 }
 
 .footer {
@@ -4199,6 +4287,10 @@ table th {
     height: 240px;
   }
 
+  .review-form__item .textarea {
+    min-height: 200px;
+  }
+
   .footer__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4245,6 +4337,13 @@ table th {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media (max-width: 767.98px) and (max-width: 767.98px) {
+  .articles-page .title {
+    font-size: 34px;
+    line-height: 38px;
   }
 }
 
@@ -4746,6 +4845,11 @@ table th {
   }
 
   .analogs-page-head {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .articles-block {
     font-size: 14px;
     line-height: 16px;
   }

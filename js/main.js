@@ -782,6 +782,25 @@ $('.option').click(function(event) {
 
 
 
+// === reviews-form handler ==================================================================
+{
+	let reviewForm = document.querySelector('.review-form');
+
+	if(reviewForm) {
+		let textarea = document.querySelector('.review-form .textarea');
+		let infoBlock = document.querySelector('.review-form .review-form__textarea-info > span');
+
+		textarea.addEventListener('input', () => {
+			infoBlock.innerText = textarea.value.length;
+		})
+	}
+
+}
+
+// === //  reviews-form handler ==================================================================
+
+
+
 });
 
 // ====  google map ===============
