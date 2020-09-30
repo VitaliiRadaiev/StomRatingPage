@@ -800,6 +800,38 @@ $('.option').click(function(event) {
 // === //  reviews-form handler ==================================================================
 
 
+// === //  reviews-form handler ==================================================================
+function showAllText(el) {
+
+}
+
+function createIntroductoryText(el) {
+
+}
+
+{ 
+	let list = document.querySelector('.lecturers__list');
+	if(list) {
+		document.querySelectorAll('.item-lecturers').forEach(item => {
+			let text = item.querySelector('.item-lecturers__text > p');
+			let a = item.querySelector('.item-lecturers__text > p > a');
+			let txt = text.innerText; 
+			text.innerText = [...text.innerText].slice(0, 320).join('');
+			// a.classList.add('link-2');
+			// a.innerText = 'читать дальше';
+			console.log(a)
+			text.append(a);
+			a.addEventListener('click', (e) => {
+    			e.preventDefault();
+    			text.innerText = txt;
+			})
+		})
+	}
+}
+
+// === //  reviews-form handler ==================================================================
+
+
 
 });
 
