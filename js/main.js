@@ -816,14 +816,14 @@ function createIntroductoryText(el) {
 			let text = item.querySelector('.item-lecturers__text > p');
 			let a = item.querySelector('.item-lecturers__text > p > a');
 			let txt = text.innerText; 
-			text.innerText = [...text.innerText].slice(0, 320).join('');
+			text.innerText = [...text.innerText].slice(0, 320).join('') + ' ';
 			// a.classList.add('link-2');
 			// a.innerText = 'читать дальше';
 			console.log(a)
 			text.append(a);
 			a.addEventListener('click', (e) => {
     			e.preventDefault();
-    			text.innerText = txt;
+    			text.innerText = [...txt].slice(0, -14).join('');
 			})
 		})
 	}
