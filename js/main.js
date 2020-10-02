@@ -801,13 +801,6 @@ $('.option').click(function(event) {
 
 
 // === //  reviews-form handler ==================================================================
-function showAllText(el) {
-
-}
-
-function createIntroductoryText(el) {
-
-}
 
 { 
 	let list = document.querySelector('.lecturers__list');
@@ -817,9 +810,6 @@ function createIntroductoryText(el) {
 			let a = item.querySelector('.item-lecturers__text > p > a');
 			let txt = text.innerText; 
 			text.innerText = [...text.innerText].slice(0, 320).join('') + ' ';
-			// a.classList.add('link-2');
-			// a.innerText = 'читать дальше';
-			console.log(a)
 			text.append(a);
 			a.addEventListener('click', (e) => {
     			e.preventDefault();

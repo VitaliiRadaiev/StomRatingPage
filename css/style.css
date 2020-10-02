@@ -3930,6 +3930,10 @@ table th {
     display: none;
   }
 
+  .srm-list .card-webinar-categories__img {
+    margin: 0 0;
+  }
+
   .burger-wrap {
     margin-left: 7px;
   }
