@@ -875,6 +875,10 @@ h6 {
   color: #171818;
 }
 
+.srm-list h1 {
+  margin-top: 30px;
+}
+
 .slick-slider {
   position: relative;
 }
@@ -3932,6 +3936,10 @@ table th {
 
   .srm-list .card-webinar-categories__img {
     margin: 0 0;
+  }
+
+  .srm-list .table-block {
+    margin-top: 30px;
   }
 
   .burger-wrap {
