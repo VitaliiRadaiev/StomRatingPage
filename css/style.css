@@ -587,6 +587,7 @@ body {
   -webkit-transition-delay: .5s;
        -o-transition-delay: .5s;
           transition-delay: .5s;
+  padding-top: 80px;
 }
 
 body.lock {
@@ -651,7 +652,6 @@ h6 {
 
 .page {
   height: 100%;
-  padding-top: 80px;
 }
 
 .container {
@@ -3912,7 +3912,7 @@ table th {
 }
 
 @media (max-width: 767.98px) {
-  .page {
+  body {
     padding-top: 56px;
   }
 
