@@ -30,7 +30,7 @@
 						<label class="search__icon" for="search">
 							<img src="img/icons/Search.svg" alt="serch">
 						</label>
-						<input id="search" autocomplete="off" type="text" name="form[]" data-value="Поиск" class="input">
+						<input id="search" autocomplete="off" type="text" name="form[]" placeholder="Поиск" class="input">
 						<button class="" type="submit"><span><img src="img/icons/Search.svg" alt="btn"></span></button>
 					</div>
 				</form>
@@ -125,6 +125,10 @@
 								<label for="head">Общее впечатление, кратко</label>
 								<input autocomplete="off" id="head" type="text" name="form[]" placeholder="От 1 ДО 15 слов"class="input">
 							</div>
+							<div class="review-form__item">
+		                        <label for="file">Ваше изображение профиля</label>
+		                        <input autocomplete="off" id="file" type="file" accept="image/*,image/jpeg" name="file" class="input">
+		                    </div>
 							<div class="review-form__item">
 								<label for="text">Ваш отзыв, подробно</label> 
 								<textarea name="form[]" id="text"  class="textarea"  maxlength="10000"></textarea>

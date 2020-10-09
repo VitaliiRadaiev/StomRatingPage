@@ -370,10 +370,27 @@ $('.option').click(function(event) {
 	if(reviewForm) {
 		let textarea = document.querySelector('.review-form .textarea');
 		let infoBlock = document.querySelector('.review-form .review-form__textarea-info > span');
+		let inputFile = document.querySelector('.review-form input[type="file"]');
 
 		textarea.addEventListener('input', () => {
 			infoBlock.innerText = textarea.value.length;
 		})
+
+		if(inputFile) {
+			let label1 = inputFile.previousElementSibling;
+			let label2 = label1.cloneNode(true);
+			label2.innerText = 'Выберите файл';
+			label2.className = 'btn-default-2';
+			inputFile.after(label2);
+
+			inputFile.addEventListener('change', function(e) {
+				if(this.files.length >= 1) {
+					label2.innerText = 'Выбрано ' + this.files[0].name
+				} else {
+					label2.innerText = 'Выберите файл';
+				}
+			});
+		}
 	}
 
 }
@@ -407,10 +424,9 @@ $('.option').click(function(event) {
 // === form filter handler ==================================================================
 {
 	let form = document.querySelector('.filter');
-	let btnClear = form.querySelector('.filter__clear > a');
 
 	if(form) {
-
+	let btnClear = form.querySelector('.filter__clear > a');
 		const removeActive = () => {
 			form.querySelectorAll('.option').forEach(item => {
 				item.classList.remove('active');
@@ -453,6 +469,23 @@ $('.option').click(function(event) {
 
 }
 // === // form filter handler ==================================================================
+
+// === form-search ==================================================================
+{
+	let form = document.querySelector('.search'); 
+	if(form) {
+		form.querySelector('.input').addEventListener('focus', function() {
+			this.classList.add('_focus');
+			this.parentElement.classList.add('_focus');
+		});
+
+		form.querySelector('.input').addEventListener('blur', function() {
+			this.classList.remove('_focus');
+			this.parentElement.classList.remove('_focus');
+		})
+	}
+}
+// === // form-search  ==================================================================
 
 });
 
